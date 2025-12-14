@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: arial;
+      }
+      .card {
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+        background-color: white;
+        width: 300px;
+        margin: 20px auto;
+        background-image: linear-gradient(30deg, #75efff, #3f51b5);
+        border: 2px solid #5aa2db;
+        padding-bottom: 25px;
+      }
+      .card .cover {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .card .description {
+        line-height: 1.7;
+        font-size: 17px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .card .title {
+        background-color: #0075ff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 6px;
+        width: fit-content;
+        margin: 10px auto 25px;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+      }
+      .card .title::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 2px;
+        top: 50%;
+        translate: 0 -50%;
+        background-color: #0075ff;
+        z-index: -1;
+        left: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img decoding="async" class="cover" src="./images/codes.jpg" alt="" />
+      <div class="title">card Info</div>
+      <div class="description">
+        <p>Role: <span>normal</span></p>
+        <p>Email: <span>ali@gmail.com</span></p>
+        <p>Email: <span>ali@gmail.com</span></p>
+        <p>Email: <span>ali@gmail.com</span></p>
+      </div>
+    </div>
+  </body>
+</html>

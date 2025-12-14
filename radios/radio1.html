@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <link rel="stylesheet" href="../all.min.css" />
+    <style>
+      .toggle-switch {
+        background-color: #ccc;
+        width: 78px;
+        height: 32px;
+        border-radius: 16px;
+        position: relative;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .toggle-checkbox {
+        display: none;
+      }
+      .toggle-checkbox:checked + .toggle-switch {
+        background-color: green;
+      }
+      .toggle-switch::before {
+        font-family: var(--fa-style-family-classic);
+        content: "\f00d";
+        font-weight: 900;
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      .toggle-checkbox:checked + .toggle-switch::before {
+        content: "\f00c";
+        left: 50px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      <input class="toggle-checkbox" type="checkbox" checked />
+      <div class="toggle-switch"></div>
+    </label>
+  </body>
+</html>

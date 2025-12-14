@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+        box-sizing: border-box;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        box-shadow: 0px 0px 10px black;
+        position: relative;
+      }
+      nav .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      nav .links .icon {
+        width: 30px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        cursor: pointer;
+      }
+      @media (max-width: 600px) {
+        nav .links .icon {
+          display: flex;
+        }
+      }
+      nav .links .icon span {
+        background-color: #333;
+        margin-bottom: 5px;
+        height: 2px;
+        width: 100%;
+      }
+      nav .links .icon span:nth-child(2) {
+        width: 60%;
+        transition: 0.3s;
+      }
+      nav .links ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      @media (min-width: 600px) {
+        nav .links ul {
+          display: flex !important;
+          height: 0px !important;
+        }
+      }
+      nav .links ul li {
+        cursor: pointer;
+        transition-duration: 0.3s;
+        font-weight: bold;
+      }
+      nav .links ul li:hover {
+        color: #03a9f4;
+      }
+      @media (max-width: 600px) {
+        nav .links ul {
+          height: 270px;
+          position: absolute;
+          left: 0;
+          flex-direction: column;
+          bottom: -270px;
+          width: 100%;
+          background-image: linear-gradient(to bottom, #fffcfc, #74c4e8);
+          transition-duration: 0.5s;
+          overflow: hidden;
+        }
+        nav .links ul li {
+          font-size: 20px;
+          margin-bottom: 15px;
+          font-weight: bold;
+        }
+        nav .links ul li:hover {
+          margin-left: 15px;
+          color: #03a9f4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Ali ibrahim</div>
+      <div class="links">
+        <span class="icon" id="icon">
+          <span></span>
+          <span id="second-line"></span>
+          <span></span>
+        </span>
+        <ul id="list">
+          <li>home</li>
+          <li>services</li>
+          <li>about</li>
+          <li>gallery</li>
+          <li>concat</li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      let icon = document.getElementById("icon");
+      let list = document.getElementById("list");
+      let line = document.getElementById("second-line");
+      icon.addEventListener("click", function () {
+        if (list.style.height == "0px") {
+          list.style.height = "270px";
+          list.style.bottom = "-270px";
+          line.style.width = "100%";
+          line.style.backgroundColor = "#74c4e8";
+        } else {
+          list.style.height = "0px";
+          list.style.bottom = "0px";
+          line.style.width = "60%";
+          line.style.backgroundColor = "#333";
+        }
+      });
+    </script>
+  </body>
+</html>

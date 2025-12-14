@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <style>
+      .get-started {
+        display: block;
+        text-decoration: none;
+        width: fit-content;
+        margin: 50px auto;
+        color: #00bdfe;
+        border: 2px solid #00bdfe;
+        padding: 15px 30px;
+        font-weight: bold;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+      }
+      .get-started:hover {
+        box-shadow: 1px 1px 25px 10px #00bdfe7d;
+      }
+      .get-started::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          #00bdfe7d,
+          transparent
+        );
+        transition: all 650ms;
+      }
+      .get-started:hover::before {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="login.html" class="get-started">Get Started</a>
+  </body>
+</html>

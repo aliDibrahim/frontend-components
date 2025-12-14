@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: arial;
+        border: none;
+      }
+      .btn {
+        width: fit-content;
+        margin: 20px auto;
+        display: block;
+        background-color: #000;
+        cursor: pointer;
+        border: 2px solid;
+        border-radius: 30px;
+        font-weight: 900;
+        overflow: hidden;
+        padding: 15px 40px;
+        position: relative;
+        text-transform: uppercase;
+      }
+      .btn .original {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        transition-duration: 0.3s;
+        inset: 0;
+      }
+      .btn:hover .original {
+        transform: translateY(100%);
+      }
+      .btn .letters {
+        display: flex;
+        color: #fff;
+      }
+      .btn span {
+        opacity: 0;
+        transform: translateY(-15px);
+        transition-duration: 0.3s;
+      }
+
+      .btn span:nth-child(2n) {
+        transform: translateY(15px);
+      }
+
+      .btn:hover span {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .btn:hover span:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+
+      .btn:hover span:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+
+      .btn:hover span:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+
+      .btn:hover span:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+
+      .btn:hover span:nth-child(6) {
+        transition-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">
+      <div class="original">Signup</div>
+      <div class="letters">
+        <span>S</span>
+        <span>I</span>
+        <span>G</span>
+        <span>N</span>
+        <span>U</span>
+        <span>P</span>
+      </div>
+    </button>
+  </body>
+</html>

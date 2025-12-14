@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: arial;
+      }
+      .select-container {
+        width: 350px;
+        margin: 20px auto;
+        max-width: 95%;
+      }
+      select {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 0;
+        border-bottom: 2px solid black;
+        font-weight: bold;
+        letter-spacing: 1px;
+        width: 100%;
+      }
+      select .disabled {
+        background-color: rgb(9, 97, 148);
+        color: white;
+        text-align: center;
+      }
+      select:focus,
+      select:active {
+        outline: none;
+        border-bottom-color: rgb(9, 97, 148);
+      }
+      .images {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(6, 69, 151);
+        background-color: #eee;
+        margin: 10px auto;
+      }
+      .images img {
+        display: none;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="select-container">
+      <select id="selectbox" data-selected="">
+        <option class="disabled" disabled="disabled">Select an image</option>
+        <option value="1">image 1</option>
+        <option value="2">image 2</option>
+        <option value="3">image 3</option>
+        <option value="4">image 4</option>
+        <option value="5">image 5</option>
+      </select>
+
+      <div class="images" data-selected="">
+        <p id="no-image">no image selected</p>
+        <img
+          src="./images/artices.jpg"
+          data-image="1"
+          alt="Ocean Wall"
+          title="Ocean Wall"
+        />
+        <img
+          src="./images/codes.jpg"
+          data-image="2"
+          alt="Skate Park"
+          title="Skate Park"
+        />
+        <img
+          src="images/landing.jpg"
+          data-image="3"
+          alt="Mountain View"
+          title="Mountain View"
+        />
+        <img
+          src="./images/questions.png"
+          data-image="4"
+          alt="Cityscape"
+          title="Cityscape"
+        />
+        <img
+          src="./images/videos.jpg"
+          data-image="5"
+          alt="Workshop"
+          title="Workshop"
+        />
+      </div>
+    </div>
+    <script>
+      let selecBox = document.getElementById("selectbox");
+      let selecBoxOptions = document.querySelectorAll("#selectbox option");
+      let imageContainer = document.querySelector(".images ");
+      let images = document.querySelectorAll(".images img");
+      let noImage = document.getElementById("no-image");
+      selecBox.addEventListener("change", (e) => {
+        images.forEach((e) => {
+          e.style.display = "none";
+          noImage.style.display = "none";
+        });
+        images[e.target.value].style.display = "block";
+      });
+    </script>
+  </body>
+</html>

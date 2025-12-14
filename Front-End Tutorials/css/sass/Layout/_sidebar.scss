@@ -1,0 +1,71 @@
+.sidebar {
+  position: fixed;
+  width: 200px;
+  background-color: #c0f0eb;
+  box-shadow: 0 0 10px #10ebef;
+  top: 0px;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 10;
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  ul {
+    width: fit-content;
+    margin: 15px auto;
+    a {
+      display: block;
+      padding: 7px 15px;
+      border-radius: 7px;
+      background-color: aliceblue;
+      margin: 0 10px 10px 20px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.3s;
+      color: black;
+      &:hover,
+      &.active {
+        background-color: #98ee0c;
+      }
+      &:hover {
+        background-color: #c9f384;
+      }
+    }
+  }
+}
+.sidebar {
+  overflow-y: auto;
+}
+.sidebar::-webkit-scrollbar {
+  width: 0em;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+#sidebar-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: 200px;
+  left: 0px;
+  z-index: 10;
+  transition: 0.5s;
+  rotate: 180deg;
+  cursor: pointer;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lafs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        display: block;
+        position: relative;
+        width: 400px;
+        min-width: 400px;
+        height: 425px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        margin: 30px auto;
+        font-family: arial;
+      }
+
+      .card-profile-img {
+        height: 70%;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+      }
+
+      .card-description-bg {
+        background-image: linear-gradient(0deg, #2b3d8f, #36c1b9);
+        border-radius: 30px;
+        position: absolute;
+        top: 55%;
+        left: -5px;
+        height: 65%;
+        width: 108%;
+        transform: skew(19deg, -9deg);
+      }
+      .card-description {
+        position: absolute;
+        color: #fff;
+        font-weight: 900;
+        bottom: 2%;
+        left: 50%;
+        translate: -50%;
+        width: 85%;
+        text-align: center;
+      }
+      .card-description h1 {
+        margin-bottom: 10px;
+        border-bottom: 1px solid;
+      }
+      .card-description p {
+        margin-bottom: 8px;
+        letter-spacing: 0.4px;
+      }
+      .card-description p span {
+        color: #f7dc6f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img class="card-profile-img" src="../images/landing.jpg" alt="" />
+      <div class="card-description-bg"></div>
+      <div class="card-description">
+        <h1>Ali N Ali</h1>
+        <p>Phone number: <span>ali@gmail.com</span></p>
+        <p>Role: <span>normal</span></p>
+        <p>State: <span>normal</span></p>
+        <p>Office: <span>normal</span></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+// Start Global rules
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+// End Global rules
+// ************************************************************
+
+// import sidebar to take us to any section we want
+@import "sass/Layout/sidebar";
+// Components import
+@import "sass/Components/heading&spikes";
+// Tutorials import
+@import "sass/tutorials";
+// Container and Responsive import
+@import "sass/Layout/container&responsive";
+// ************************************************************

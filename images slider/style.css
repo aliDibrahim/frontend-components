@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+.images-slider {
+  width: 60%;
+  margin: 20px auto;
+}
+.images-slider .image {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-image 0.5s;
+}
+.images-slider .image img {
+  max-width: 100%;
+}
+.images-slider .image .number {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  background-color: #09127e;
+  padding: 2px 5px;
+  border-radius: 4px;
+  user-select: none;
+}
+.images-slider .image .number span {
+  color: #65d900;
+}
+.images-slider .control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.images-slider .control button {
+  background-color: #04194e;
+  border: 1px solid #03a9f4;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.images-slider .control button:disabled {
+  background-color: #607d8b;
+  cursor: no-drop;
+}
+.images-slider .control button:disabled:hover {
+  background-color: #607d8b;
+}
+.images-slider .control button:hover {
+  background-color: #0336b6;
+}
+.images-slider .control .images-number span {
+  background-color: #baafaf;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.images-slider .control .images-number span:hover {
+  background-color: #777;
+}
+.images-slider .control .images-number span.active {
+  color: white;
+  background-color: #57b703;
+}
+
+.images-slider .control .images-number {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
