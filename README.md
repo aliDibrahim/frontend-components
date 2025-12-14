@@ -15,6 +15,7 @@ A collection of reusable front-end UI components, examples, and small utilities 
 - `radios/` — Custom radio inputs
 - `select/` — Custom select demos
 - `show-hide password/` — Show/hide password UI
+- `horizental sliding/` — Images horizental slider demo
 - `Sidebar Menu/` — Sidebar menu demo
 - `webfonts/` — Local webfonts
 - `all.min.css` — Global compiled CSS used by some demos
